@@ -14,29 +14,44 @@ body {
 }
 
 img {
-    max-width: 100%;
+    width: 350px;
+    margin-top: 70px;
+    margin-left: 140px;
+
 }
 
 a {
     text-decoration: none;
+    
 }
 
 
 .container {
-    width: 90%;
-    max-width: 1100px;
+    width: 70%;
+    max-width: 150vw;
     margin: 0 auto;
+}
+
+.texto .botao {
+    background-color: #047506;
+    color: white;
+    display: inline-block;
+    padding: 12px 70px;
+    border-radius: 25px;
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
 }
 
-.botao {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-    margin-top: 30px;
-    display: inline-block;
-
+.texto .botao:hover {
+    background-color: #0aa50c;
+    color: #fff;
+    transition: 0.3s ease-in-out;
 }
 
 .cabecalho {
@@ -50,29 +65,44 @@ a {
 }
 
 
+.container.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 50px;
+    margin-left: 15px;
+
+}
+
+
 .navegacao {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2.9rem;
     font-weight: bold;
-    color: #4caf50;
+    color: #0ca511;
+    margin-left: 150px;
+
 
 }
 
 .menu {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 45px;
+    font-weight: bold;
+    font-size: x-large;
+    margin-left: 150px;
 }
 
 .menu a {
     color: #333;
     font-weight: bold;
+   
 
 }
 
@@ -92,31 +122,40 @@ a {
 .destaque .container {
     display: flex;
     align-items: center;
-    gap:30px
+    gap: 30px
 }
 
 .texto h1 {
     font-size: 2.5rem;
-    margin-bottom: 15px;
+    margin-top: 90px;
     color: #333;
 }
 
-h2{
-text-align: center;
-margin-bottom: 30px;
-
+p {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
+h2 {
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 25px;
+
+}
+
 .recursos .container {
- display: grid;
- grid-template-columns: repeat(3, 1fr );
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
 
 }
 
 .card {
-    padding: 20px
+    padding: 20px;
     text-align: center;
+    font-size: 18px;
 }
 
 .icone {
@@ -127,14 +166,136 @@ margin-bottom: 30px;
 
 
 .cta {
-    background-color: #4cfa50;
+    background-color: #047506;
     text-align: center;
-    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 2%;
+    width: 100%;
+
 }
 
 
-.cta .botao{
-    background-color: white;
-    color: #4cfa50;
+.cta .botao {
+
+    background-color: #fff;
+    color: #047506;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 25px;
+    margin: 2% 0 3% 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+
 }
 
+
+.cta .botao:hover {
+    background-color: #078b07;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+footer {
+
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 10p font-size: 18px;
+    font-weight: bold;
+
+}
+
+.botao-menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width:768px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .logo {
+        margin-left: 100px;
+    }
+
+    .destaque .container {
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .container {
+        margin: auto;
+    }
+
+
+    img {
+        display: inline-flex;
+        margin-left: 24px;
+    }
+
+    .recursos .container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .cta p {
+        font-size: 16px;
+    }
+
+    .botao-menu {
+        display: flex;
+        margin-left: auto;
+
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0%;
+        background-color: #fff;
+        flex-direction: column;
+        overflow: hidden;
+        transition: 0.6s ease-in-out;
+        max-height: 0px;
+    
+    }
+
+    .menu.ativo {
+        max-height: 200px;
+        padding: 0;
+        display: flex;
+        left: -100px;
+        cursor: pointer;
+        box-shadow: 100px #0ca511;
+       
+
+    }
+
+
+    .cta{
+        width: 100%;
+        font-size: 13px;
+        overflow: hidden;
+    }
+
+
+}
